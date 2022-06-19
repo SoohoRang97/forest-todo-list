@@ -1,0 +1,14 @@
+/* border */
+:root {
+  --main-border-radius: 15px;
+}
+
+/*color*/
+:root {
+  --title-color: #267127;
+  --main-green-1: #4e944f;
+  --sub-green-1: #83bd75;
+  --sub-green-2: #b4e197;
+  --sub-green-3: #e9efc0;
+  --sub-green-4: #d8e295;
+}

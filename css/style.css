@@ -1,0 +1,16 @@
+@import "reset.css";
+@import "column.css";
+@import "variables.css";
+@import "todo.css";
+@import "weather.css";
+@import "music.css";
+@import "icons.css";
+@import "quote.css";
+
+.hidden {
+  display: none;
+}
+.A17-del {
+  text-decoration: line-through;
+  color: var(--sub-green-1);
+}

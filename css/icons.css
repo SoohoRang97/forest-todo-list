@@ -1,0 +1,11 @@
+.icon-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 40px;
+  color: #83bd75;
+}
+.icon-box i:hover {
+  cursor: pointer;
+  color: var(--title-color);
+}

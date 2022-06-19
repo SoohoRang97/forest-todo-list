@@ -1,0 +1,129 @@
+.king h1 {
+  margin-left: 10px;
+}
+
+#todo-form {
+  width: 100%;
+  display: flex;
+}
+
+#todo-form input {
+  width: 100%;
+  background-color: var(--sub-green-3);
+  padding-left: 10px;
+  font-size: 15px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  color: var(--title-color);
+}
+
+#todo-form input::placeholder {
+  color: var(--sub-green-1);
+}
+
+ul {
+  width: 100%;
+  height: 500px;
+  border-radius: 5px;
+  overflow-y: scroll;
+  list-style: none;
+}
+
+li {
+  width: 100%;
+  height: 50px;
+  margin: 0px 0px 15px 0px;
+  background-color: var(--sub-green-3);
+  color: var(--title-color);
+  font-size: 13px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li:hover {
+  color: var(--sub-green-1);
+}
+
+li div {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  width: 80%;
+}
+
+li span {
+  margin-left: 10px;
+}
+
+li button {
+  height: 25px;
+  width: 55px;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: none;
+  color: var(--sub-green-3);
+  background-color: rgb(243, 46, 36);
+}
+
+/*input 은 숨겨주기*/
+li input {
+  display: none;
+}
+/*input 바로 다음의 label*/
+li input + label {
+  cursor: pointer;
+}
+
+/*input 바로 다음의 label:before 에 체크하기 전 CSS 설정*/
+li input + label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  border-radius: 50%;
+  border: 1px solid #cbcbcb;
+  vertical-align: middle; /*체크 전과 체크 후 높이 차이 때문에 설정*/
+}
+
+/*checked된 input 바로 다음의 label:before 에 체크 후 CSS 설정*/
+li div input:checked + label:before {
+  content: "\f058"; /*폰트어썸 유니코드*/
+  font-family: "Font Awesome 5 free"; /*폰트어썸 아이콘 사용*/
+  font-weight: 600; /*폰트어썸 설정*/
+  color: var(--sub-green-1);
+  border-color: var(--sub-green-1);
+  font-size: 17px;
+  text-align: center;
+}
+
+li button:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 100px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(1.5px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
