@@ -5,32 +5,191 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Momentum</title>
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
       rel="stylesheet"
     />
   </head>
-  <body class="login-body">
-    <div>
-      <h1>To-Do Forest.</h1>
-      <form id="login-form">
-        <input
-          class="input-text input"
-          type="text"
-          required
-          maxlength="15"
-          placeholder="what is your name?"
-        />
-        <input
-          class="input-submit input"
-          type="submit"
-          onclick="location.href = LOGIN_LINK"
-          placeholder="go"
-          value="go"
-        />
-      </form>
-    </div>
+  <body>
+    <main>
+      <section class="column wing">
+        <h1 class="column-box__title">Todays</h1>
+        <div class="column-box side">
+          <div class="article-content">
+            <h2 id="clock"></h2>
+            <h4 class="clock__date"></h4>
+          </div>
+        </div>
+        <div class="column-box side">
+          <div class="article-content">
+            <div class="weather__today">
+              <div class="weather__main">
+                <span class="weather__icon"
+                  ><i class="fa-regular fa-circle-question"></i
+                ></span>
+                <div class="weather__text">
+                  <span class="weather__title">Unknown</span>
+                  <span class="weather__city">Unknown</span>
+                </div>
+              </div>
+              <div class="weather__summary title-green">
+                <span class="weather__humidity">NaN</span>
+                <span class="weather__wind">NaN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column-box side">
+          <h1 class="column-box__title">Daily Weather</h1>
+          <div class="article-content n2d">
+            <div class="weather__daily row0">
+              <div class="weather__main">
+                <span class="weather__icon"
+                  ><i class="fa-regular fa-circle-question"></i
+                ></span>
+                <span class="weather__day"></span>
+              </div>
+              <div class="weather__summary">
+                <span class="weather__temp-max">NaN</span>
+                <span class="weather__temp-min">NaN</span>
+              </div>
+            </div>
+            <div class="weather__daily row1">
+              <div class="weather__main">
+                <span class="weather__icon"
+                  ><i class="fa-regular fa-circle-question"></i
+                ></span>
+                <span class="weather__day"></span>
+              </div>
+              <div class="weather__summary">
+                <span class="weather__temp-max">NaN</span>
+                <span class="weather__temp-min">NaN</span>
+              </div>
+            </div>
+            <div class="weather__daily row2">
+              <div class="weather__main">
+                <span class="weather__icon"
+                  ><i class="fa-regular fa-circle-question"></i
+                ></span>
+                <span class="weather__day"></span>
+              </div>
+              <div class="weather__summary">
+                <span class="weather__temp-max">NaN</span>
+                <span class="weather__temp-min">NaN</span>
+              </div>
+            </div>
+            <div class="weather__daily row3">
+              <div class="weather__main">
+                <span class="weather__icon"
+                  ><i class="fa-regular fa-circle-question"></i
+                ></span>
+                <span class="weather__day"></span>
+              </div>
+              <div class="weather__summary">
+                <span class="weather__temp-max">NaN</span>
+                <span class="weather__temp-min">NaN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="column king">
+        <div class="column-box second">
+          <h1 class="column-box__title">TO-DO LIST</h1>
+          <form id="todo-form">
+            <input
+              type="text"
+              placeholder="할 일을 입력하고, 저장을 원하시면 Enter 키를 눌러주세요."
+              required
+            />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+      </section>
+      <section class="column wing">
+        <div class="logout-box">
+          <h1 id="greeting" class="column-box__title"></h1>
+          <a id="logout" onclick="location.href = LOGOUT_LINK"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i
+          ></a>
+        </div>
+        <div class="column-box">
+          <article class="song">
+            <div class="article-content">
+              <audio id="audio" preload="metadata"></audio>
+              <div class="song__data">
+                <img class="disk" />
+                <div>
+                  <span class="song__title">title</span>
+                  <span class="song__artist">artist</span>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress__bar">
+                  <div class="progress__played"></div>
+                  <div class="progress__total"></div>
+                </div>
+                <div class="progress__time">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="actions">
+                <span class="random">
+                  <i class="fa-solid fa-random"></i>
+                </span>
+                <span class="backward">
+                  <i class="fa-solid fa-backward fa-lg"></i>
+                </span>
+                <span class="play">
+                  <i class="fa-solid fa-play"></i>
+                </span>
+                <span class="forward">
+                  <i class="fa-solid fa-forward fa-lg"></i>
+                </span>
+                <span class="repeat">
+                  <i class="fa-solid fa-repeat"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+          <div class="column-box side">
+            <article class="quote">
+              <div class="article-content">
+                <div class="quote__display">
+                  <h2>Today Quote</h2>
+                  <p class="quote__text"></p>
+                  <span class="quote__author"></span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="article-content">
+            <div class="icon-box">
+              <i
+                onclick="window.open('http://www.youtube.com')"
+                class="fab fa-youtube"
+              ></i>
+              <i
+                onclick="window.open('https://www.google.com/')"
+                class="fab fa-google"
+              ></i>
+              <i
+                onclick="window.open('https://github.com/')"
+                class="fab fa-github"
+              ></i>
+              <i class="fas fa-folder-plus"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/quote.js"></script>
   </body>
 </html>
